@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cymv0uxtvce3r"]
+
+[ext_resource type="Script" uid="uid://f6bgrhmcfpur" path="res://Scripts/Game.gd" id="1_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://cb42rsm3l2a01" path="res://Assets/Sprites/grid_element.png" id="2_3dryh"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_wrm1d")
+length_height = Vector2i(45, 6)
+
+[node name="TiledFloorBG" type="Sprite2D" parent="."]
+z_index = -999
+texture_repeat = 2
+texture = ExtResource("2_3dryh")
+centered = false
+region_enabled = true
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(0.75, 0.75)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
